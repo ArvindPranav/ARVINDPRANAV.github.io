@@ -1227,44 +1227,68 @@ button {
   cursor: pointer;
 }
 
+img, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Media queries for devices with a max-width of 600px */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    .navbar, .tabs {
+    .navbar, .tabs, .nav_flex, .tabs ul {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .nav_flex li, .tabs ul li {
-        margin: 10px 0;
+    .nav_flex li {
+        margin: 10px auto; /* Centering menu items */
     }
 
-    .banner p, .details .price_range, .details .place {
-        font-size: 18px; /* Smaller font size for smaller screens */
+    .banner p, .details p, .grid1 .cell, .promo_code, .customer_review {
+        text-align: center; /* Centering text for small screens */
     }
 
+    /* Adjusting padding and sizes for smaller screens */
+    .blue_strip, .banner, .menu, .forms, .select, .grid1, .lower_body, .grid2 {
+        padding: 5px;
+        margin: 0 auto; /* Centralizing grids */
+        width: 95%; /* Giving some space from the edges */
+    }
+
+    /* Adjust grid to stack vertically */
     .grid1, .grid2, .grid3, .grid4 {
-        grid-template-columns: repeat(1, 1fr); /* Adjust grid layout */
+        grid-template-columns: 1fr; /* One column layout */
     }
 
-    .input-hover-effect, .travelers-chooser {
-        width: 100%; /* Full width inputs on smaller screens */
+    /* Smaller text and components adjustments */
+    .details .place, .details .price_range, .tabs ul li, .nav_flex li, .input-hover-effect, .travelers-chooser {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px;
+        margin: 5px auto; /* Adjust spacing */
     }
 
-    .promo_text, .promo_button {
-        width: auto; /* Adjust width for smaller screens */
+    /* Button size adjustments */
+    #searchButton, .promo_button {
+        width: 100%; /* Full-width buttons */
+        padding: 12px;
     }
-    .grid1 .cell, .grid2 .cell21, .grid3 .cell3, .grid4 .cell4 {
-    width: 100%; /* Makes each grid cell full width on smaller screens */
+
+    /* Form input adjustments */
+    .input-with-icon, .input-hover-effect {
+        width: 100%; /* Full-width inputs */
+    }
 }
 
-img {
-    max-width: 100%; /* Makes images responsive */
-    height: auto; /* Maintain aspect ratio */
+/* You might also need additional media queries for other specific sizes */
+@media (max-width: 480px) {
+    /* Further reduce sizes and paddings for very small devices */
+    .nav_flex li, .tabs ul li {
+        font-size: 12px; /* Even smaller font sizes for extra small devices */
+    }
 }
-}
+
+
 
     </style>
 </head>

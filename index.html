@@ -1227,6 +1227,45 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .navbar, .tabs {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav_flex li, .tabs ul li {
+        margin: 10px 0;
+    }
+
+    .banner p, .details .price_range, .details .place {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .grid1, .grid2, .grid3, .grid4 {
+        grid-template-columns: repeat(1, 1fr); /* Adjust grid layout */
+    }
+
+    .input-hover-effect, .travelers-chooser {
+        width: 100%; /* Full width inputs on smaller screens */
+    }
+
+    .promo_text, .promo_button {
+        width: auto; /* Adjust width for smaller screens */
+    }
+    .grid1 .cell, .grid2 .cell21, .grid3 .cell3, .grid4 .cell4 {
+    width: 100%; /* Makes each grid cell full width on smaller screens */
+}
+
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+}
+
     </style>
 </head>
 

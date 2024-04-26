@@ -439,11 +439,14 @@
         }
 
         .cell21 .london {
-            margin: 0px;
-            padding-left: 50px;
-            padding-top: 8px;
-            margin-left: -15px;
-            margin-top: 26px;
+            
+    margin: 0px;  /* Ensures no additional margin */
+    padding-left: 45px;  /* Consistent with other images like .USA */
+    padding-top: 12px;  /* Consistent with other images like .USA */
+    margin-left: -10px;  /* Adjust if necessary to align with other images */
+    margin-top: 26px;  /* Consistent with other images */
+
+
         }
 
 
@@ -515,25 +518,26 @@
         }
 
         .promo_text {
-                width: 690px;
-    padding: 10px;
-    position: relative;
-    bottom: 4px;
-    border: 2px solid rgb(118, 118, 118);
+            height: 35px;
+            width: 690px;
+            padding: 10px;
+            position: relative;
+            bottom: 5px;
+            border: 2px solid rgb(118, 118, 118);
         }
 
         .promo_button {
-            width: 170px;
-            height: 63px;
-            color: white;
-            font-size: 20px;
-            font-family: "Quicksand", sans-serif;
-            background-color: #006ee3;
-            border: none;
-            position: relative;
-            right: 4px;
-            bottom: 9px;
-            font-weight: 1000;
+            width: 172px;
+    height: 63px;
+    color: white;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    background-color: #006ee3;
+    border: none;
+    position: relative;
+    right: 4px;
+    bottom: 11px;
+    font-weight: 1000;
         }
 
         .offer_tag {
@@ -1228,9 +1232,20 @@ button {
   cursor: pointer;
 }
 
+/* CSS Code for Responsive Website*/
+
+/* General styles for body and containers to ensure they do not exceed the viewport width */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+
+
+/* Ensuring all images and embedded content are responsive */
 img, iframe, embed, object {
     max-width: 100%;
-    
+    /* height: auto; */
 }
 
 
@@ -1288,29 +1303,6 @@ img, iframe, embed, object {
         font-size: 12px; /* Even smaller font sizes for extra small devices */
     }
 }
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
     </style>
 </head>
@@ -1584,7 +1576,7 @@ img, iframe, embed, object {
     <div class="google_maps">
         <img src="google_maps.png" alt="your_image" height="200px" width="1366px">
     </div>
-    <div class="explore_map">
+    <div class="explore_map" onclick="openGoogleMaps();">
 
         <div class="location_map"><img src="locate_symbol_googlemap-transformed.png" alt="your image" height="20px"
                 width="20px"></div>
